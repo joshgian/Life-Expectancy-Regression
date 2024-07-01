@@ -4,6 +4,11 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
 
+image_url = 'https://github.com/joshgian/Life-Expectancy-Regression/blob/main/All%20Features.png'
+
+# Menampilkan gambar dari URL
+st.image(image_url, caption='All Features', use_column_width=True)
+
 # Judul aplikasi
 st.title('Sistem Prediksi Umur Harapan Hidup')
 

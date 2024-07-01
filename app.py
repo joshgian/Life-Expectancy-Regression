@@ -6,7 +6,7 @@ import pickle
 
 
 st.title('All the Features you need to input to start the Prediction')
-image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png?token=GHSAT0AAAAAACTNKWAF4WWHLLYTYCOJMV6EZUC2WVA'
+image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png?token=GHSAT0AAAAAACTNKWAFSNMXIUBGZC4UYISOZUC3BTQ'
 
 # Menampilkan gambar dari URL
 st.image(image_url, caption='All Features', use_column_width=True)

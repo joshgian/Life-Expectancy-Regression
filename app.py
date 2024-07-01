@@ -6,7 +6,7 @@ import pickle
 
 
 # Judul dengan gaya khusus menggunakan HTML
-st.markdown('<p style="font-size:24px; color:blue;">All the Features you need to input to start the Prediction</p>', unsafe_allow_html=True)
+st.markdown('<h1>All the Features you need to input to start the Prediction</h1>', unsafe_allow_html=True)
 
 st.title('Features you need to input to start the Prediction')
 image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png'

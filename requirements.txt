@@ -1,1 +1,1 @@
-matplotlib.pyplot
+matplotlib.pyplot==3.7.2

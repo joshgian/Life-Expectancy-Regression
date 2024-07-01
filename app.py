@@ -17,7 +17,7 @@ df = pd.read_csv('Life Expectancy Data.csv')
 df
 
 # Judul aplikasi
-st.title('Sistem Prediksi Umur Harapan Hidup')
+st.title('Life Expectancy Prediction tools')
 
 # Input dari pengguna
 feature1 = st.number_input('Feature1', min_value=0.0, max_value=100.0)

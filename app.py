@@ -17,7 +17,7 @@ if st.button('Predict'):
     # Muat model, encoder, dan scaler dari file
     model = load_model('model_ann.h5')
 
-    with open('label_encoder_.pkl', 'rb') as encoder_file:
+    with open('label_encoder.pkl', 'rb') as encoder_file:
         label_encoder = pickle.load(encoder_file)
 
     with open('scaler.pkl', 'rb') as scaler_file:

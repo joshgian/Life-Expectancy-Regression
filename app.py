@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 import pickle
 
 
-st.title('All the Features you need to input to start the Prediction' , style={'font-size': '24px', 'color': 'blue'})
+st.title('All the Features you need to input to start the Prediction')
 image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png'
 
 # Menampilkan gambar dari URL

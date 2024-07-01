@@ -4,10 +4,6 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
 
-
-# Judul dengan gaya khusus menggunakan HTML
-st.markdown('<h2>Features you need to input to start the Prediction</h2>', unsafe_allow_html=True)
-
 st.title('Features you need to input to start the Prediction')
 image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png'
 

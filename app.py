@@ -12,7 +12,7 @@ image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regressi
 st.image(image_url, caption='All Features', use_column_width=True)
 
 # load dataset into pandas
-h2 = Value you need to input  
+st.h2 = Value you need to input  
 df = pd.read_csv('Life Expectancy Data.csv')
 df
 

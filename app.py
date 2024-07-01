@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
 
-image_url = 'https://github.com/joshgian/Life-Expectancy-Regression/blob/main/All%20Features.png?raw=true'
+image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png?token=GHSAT0AAAAAACTNKWAF4WWHLLYTYCOJMV6EZUC2WVA'
 
 # Menampilkan gambar dari URL
 st.image(image_url, caption='All Features', use_column_width=True)

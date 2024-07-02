@@ -73,7 +73,7 @@ countries = np.array(['Afghanistan', 'Albania', 'Algeria', 'Angola',
 st.title('Life Expectancy Prediction tools')
 
 # Input dari pengguna
-country = st.selectbox('Country', countries)
+country = st.number_input('Country', min_value=0, max_value=1000)
 year = st.slider('Year', min_value=2000, max_value=2015)
 status = st.selectbox('Status', ['Developing', 'Developed'])
 adult_mortality = st.number_input('Adult Mortality', min_value=0, max_value=1000)

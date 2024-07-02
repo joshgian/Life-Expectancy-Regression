@@ -117,20 +117,19 @@ if st.button('Predict'):
                                        'Thinness 1-19 Years', 'Thinness 5-9 Years', 'Income Composition of Resources',
                                        'Schooling'])
     
-    # Encode categorical features
-    input_data['Country'] = label_encoder.transform(input_data['Country'])
-    input_data['Status'] = label_encoder.transform(input_data['Status'])
-    
-    # Scale numerical features
-    input_data[['Year', 'Adult Mortality', 'Infant Deaths', 'Alcohol', 'Percentage Expenditure', 'Hepatitis B', 
-                'Measles', 'BMI', 'Under-five Deaths', 'Polio', 'Total Expenditure', 'Diphtheria', 'HIV/AIDS', 
-                'GDP', 'Population', 'Thinness 1-19 Years', 'Thinness 5-9 Years', 'Income Composition of Resources', 
-                'Schooling']] = scaler.transform(input_data[['Year', 'Adult Mortality', 'Infant Deaths', 'Alcohol', 
-                                                             'Percentage Expenditure', 'Hepatitis B', 'Measles', 'BMI', 
-                                                             'Under-five Deaths', 'Polio', 'Total Expenditure', 
-                                                             'Diphtheria', 'HIV/AIDS', 'GDP', 'Population', 
-                                                             'Thinness 1-19 Years', 'Thinness 5-9 Years', 
-                                                             'Income Composition of Resources', 'Schooling']])
+    # Check if input country exists in the trained encoders
+    if country in label_encoder['Country'].classes_:
+        input_data['Country'] = label_encoder['Country'].transform(input_data['Country'])
+    else:
+        st.error(f'Country "{country}" not found in training data.')
+        # Handle this case appropriately (e.g., default value or error message)
+
+    # Check if input status exists in the trained encoders
+    if status in label_encoder['Status'].classes_:
+        input_data['Status'] = label_encoder['Status'].transform([input_data['Status']])[0]
+    else:
+        st.error(f'Status "{status}" not found in training data.')
+        # Handle this case appropriately (e.g., default value or error message)
     
     # Prediksi
     prediction = model.predict(input_data)

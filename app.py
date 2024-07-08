@@ -4,6 +4,16 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
 
+# Load model
+model = load_model('model_ann.h5')
+
+# Load encoders
+with open('encoder.pkl', 'rb') as encoder_file:
+    encoder_dict = pickle.load(encoder_file)
+
+# Load scaler
+with open('scaler.pkl', 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)
 
 # Judul dengan gaya khusus menggunakan HTML
 st.markdown('<p style="font-size:24px; color:blue;">All the Features you need to input to start the Prediction</p>', unsafe_allow_html=True)
@@ -97,17 +107,6 @@ schooling = st.number_input('Schooling (Years)', min_value=0.0, max_value=20.0)
 
 # Prediksi ketika tombol diklik
 if st.button('Predict'):
-    # Load model
-    model = load_model('model_ann.h5')
-
-    # Load encoders
-    with open('encoder.pkl', 'rb') as encoder_file:
-    encoder_dict = pickle.load(encoder_file)
-
-    # Load scaler
-    with open('scaler.pkl', 'rb') as scaler_file:
-    scaler = pickle.load(scaler_file)
-
     # Transform input dari pengguna
     input_data = pd.DataFrame([[country, year, status, adult_mortality, infant_deaths, alcohol, percentage_expenditure,
                                 hepatitis_b, measles, bmi, under_five_deaths, polio, total_expenditure, diphtheria,

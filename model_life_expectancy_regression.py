@@ -45,18 +45,18 @@ df
 
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean', fill_value=None)
 
-df['Life expectancy ']=imputer.fit_transform(df[['Life expectancy ']])
+df['Life expectancy']=imputer.fit_transform(df[['Life expectancy']])
 df['Adult Mortality']=imputer.fit_transform(df[['Adult Mortality']])
 df['Alcohol']=imputer.fit_transform(df[['Alcohol']])
 df['Hepatitis B']=imputer.fit_transform(df[['Hepatitis B']])
-df[' BMI ']=imputer.fit_transform(df[[' BMI ']])
+df['BMI']=imputer.fit_transform(df[['BMI']])
 df['Polio']=imputer.fit_transform(df[['Polio']])
 df['Total expenditure']=imputer.fit_transform(df[['Total expenditure']])
-df['Diphtheria ']=imputer.fit_transform(df[['Diphtheria ']])
+df['Diphtheria']=imputer.fit_transform(df[['Diphtheria']])
 df['GDP']=imputer.fit_transform(df[['GDP']])
 df['Population']=imputer.fit_transform(df[['Population']])
-df[' thinness  1-19 years']=imputer.fit_transform(df[[' thinness  1-19 years']])
-df[' thinness 5-9 years']=imputer.fit_transform(df[[' thinness 5-9 years']])
+df['thinness  1-19 years']=imputer.fit_transform(df[['thinness  1-19 years']])
+df['thinness 5-9 years']=imputer.fit_transform(df[['thinness 5-9 years']])
 df['Income composition of resources']=imputer.fit_transform(df[['Income composition of resources']])
 df['Schooling']=imputer.fit_transform(df[['Schooling']])
 
@@ -65,9 +65,9 @@ df['Schooling']=imputer.fit_transform(df[['Schooling']])
 # Specify the list of columns you want to handle outliers for
 cols_to_handle_outliers = [
     'Adult Mortality', 'infant deaths', 'Alcohol', 'percentage expenditure',
-    'Hepatitis B', 'Measles ', ' BMI ', 'under-five deaths ', 'Polio',
-    'Total expenditure', 'Diphtheria ', ' HIV/AIDS', 'GDP', 'Population',
-    ' thinness  1-19 years', ' thinness 5-9 years',
+    'Hepatitis B', 'Measles', 'BMI', 'under-five deaths', 'Polio',
+    'Total expenditure', 'Diphtheria', 'HIV/AIDS', 'GDP', 'Population',
+    'thinness  1-19 years', 'thinness 5-9 years',
     'Income composition of resources', 'Schooling'
 ]
 
@@ -122,19 +122,19 @@ with open('encoder.pkl', 'wb') as file:
 
 """# **<font color = #208AAE>Splitting Features from Target</font>**"""
 
-X = df.drop('Life expectancy ', axis=1)
-y = df['Life expectancy ']
+X = df.drop('Life expectancy', axis=1)
+y = df['Life expectancy']
 
 X
 
 """# **<font color = #208AAE>Data Scaling</font>**"""
 
-# Columns to scale
+# Columns to scale (pastikan nama kolom tanpa spasi tambahan)
 cols_to_scale = ['Country', 'Year', 'Adult Mortality',
        'infant deaths', 'Alcohol', 'percentage expenditure', 'Hepatitis B',
-       'Measles ', ' BMI ', 'under-five deaths ', 'Polio', 'Total expenditure',
-       'Diphtheria ', ' HIV/AIDS', 'GDP', 'Population',
-       ' thinness  1-19 years', ' thinness 5-9 years',
+       'Measles', 'BMI', 'under-five deaths', 'Polio', 'Total expenditure',
+       'Diphtheria', 'HIV/AIDS', 'GDP', 'Population',
+       'thinness  1-19 years', 'thinness 5-9 years',
        'Income composition of resources', 'Schooling']
 
 # Apply Min-Max scaling to the specified columns

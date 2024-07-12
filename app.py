@@ -15,7 +15,7 @@ with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Input features
-st.markdown('<p style="font-size:24px; color:blue;">All the Features you need to input to start the Prediction</p>', unsafe_allow_html=True)
+st.title('All the Features you need to input to start the Prediction')
 image_url = 'https://raw.githubusercontent.com/joshgian/Life-Expectancy-Regression/main/All%20Features.png'
 st.image(image_url, caption='All Features', use_column_width=True)
 df = pd.read_csv('Life Expectancy Data.csv')

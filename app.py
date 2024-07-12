@@ -22,6 +22,7 @@ df = pd.read_csv('Life Expectancy Data.csv')
 st.title('Example Value to input')
 st.dataframe(df.head())
 
+st.title('Life Expectancy Prediction Tools')
 # Collect input data
 country = st.selectbox('Country', df['Country'].unique())
 year = st.number_input('Year', min_value=2000, max_value=2015, step=1)
